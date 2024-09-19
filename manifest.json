@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Unstuck-me",
+    "description": "Stop doom-scrolling and disctraction content",
+    "version": "1.0",
+    "permissions": ["storage", "tabs"],
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": [
+                "https://www.youtube.com/watch*",
+                "https://www.youtube.com/"
+            ]
+            
+        }
+    ],
+    "options_page": "main.html",
+    "action": {
+        "default_popup": "main.html"
+    }
+
+}
